@@ -1,0 +1,209 @@
+\chapter{Вёрстка таблиц} \label{chapt3}
+
+\section{Таблица обыкновенная} \label{sect3_1}
+
+Так размещается таблица:
+
+\begin{table} [htbp]
+  \centering
+  \parbox{15cm}{\caption{Название таблицы}\label{Ts0Sib}}
+%  \begin{center}
+  \begin{tabular}{| p{3cm} || p{3cm} | p{3cm} | p{4cm}l |}
+  \hline
+  \hline
+  Месяц   & \centering $T_{min}$, К & \centering $T_{max}$, К &\centering  $(T_{max} - T_{min})$, К & \\
+  \hline
+  Декабрь &\centering  253.575   &\centering  257.778    &\centering      4.203  &   \\
+  Январь  &\centering  262.431   &\centering  263.214    &\centering      0.783  &   \\
+  Февраль &\centering  261.184   &\centering  260.381    &\centering     $-$0.803  &   \\
+  \hline
+  \hline
+  \end{tabular}
+%  \end{center}
+\end{table}
+
+%\newpage
+%============================================================================================================================
+
+\section{Параграф - два} \label{sect3_2}
+
+Некоторый текст.
+
+%\newpage
+%============================================================================================================================
+
+\section{Параграф с подпараграфами} \label{sect3_3}
+
+\subsection{Подпараграф - один} \label{subsect3_3_1}
+
+Некоторый текст.
+
+\subsection{Подпараграф - два} \label{subsect3_3_2}
+
+Некоторый текст.
+
+\clearpage
+
+%\newpage
+%============================================================================================================================
+
+\section{Ссылки} \label{sect1_2}
+Сошлёмся на библиографию: \cite{bib1}, \cite{bib2}, \cite{bib3,bib4,bib5}.
+
+Сошлёмся на приложения: Приложение \ref{AppendixA}, Приложение \ref{AppendixB2}.
+
+Сошлёмся на формулу: формула (\ref{eq:equation1}).
+
+Сошлёмся на изображение: рисунок \ref{img:knuth}.
+
+%\newpage
+%============================================================================================================================
+
+\section{Формулы} \label{sect1_3}
+
+\subsection{Ненумерованные одиночные формулы} \label{subsect1_3_1}
+
+Вот так может выглядеть формула, которую необходимо вставить в строку по тексту: $x \approx \sin x$ при $x \to 0$.
+
+А вот так выглядит ненумерованая отдельностоящая формула c подстрочными и надстрочными индексами:
+$$
+(x_1+x_2)^2 = x_1^2 + 2 x_1 x_2 + x_2^2
+$$
+
+При использовании дробей формулы могут получаться очень высокие:
+$$
+  \frac{1}{\sqrt(2)+
+  \displaystyle\frac{1}{\sqrt{2}+
+  \displaystyle\frac{1}{\sqrt{2}+\cdots}}}
+$$
+
+В формулах можно использовать греческие буквы:
+$$
+\alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\vartheta\iota\kappa\lambda\\mu\nu\xi\pi\varpi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega\Gamma\Delta\Theta\Lambda\Xi\Pi\Sigma\Upsilon\Phi\Psi\Omega
+$$
+
+%\newpage
+%============================================================================================================================
+
+\subsection{Ненумерованные многострочные формулы} \label{subsect1_3_2}
+
+Вот так можно написать две формулы, не нумеруя их, чтобы знаки равно были строго друг под другом:
+\begin{eqnarray}
+  f_W & = & \min \left( 1, \max \left( 0, \frac{W_{soil} / W_{max}}{W_{crit}} \right)  \right), \nonumber \\
+  f_T & = & \min \left( 1, \max \left( 0, \frac{T_s / T_{melt}}{T_{crit}} \right)  \right), \nonumber
+\end{eqnarray}
+
+Можно использовать разные математические алфавиты:
+\begin{eqnarray}
+\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber \\
+\mathfrak{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber \\
+\mathbb{ABCDEFGHIJKLMNOPQRSTUVWXYZ} \nonumber
+\end{eqnarray}
+
+Посмотрим на систему уравнений на примере аттрактора Лоренца:
+
+$$
+\left\{
+  \begin{array}{rl}
+    \dot x = & \sigma (y-x) \\
+    \dot y = & x (r - z) - y \\
+    \dot z = & xy - bz
+  \end{array}
+\right.
+$$
+
+А для вёрстки матриц удобно использовать многоточия:
+$$
+\left(
+  \begin{array}{ccc}
+  	a_{11} & \ldots & a_{1n} \\
+  	\vdots & \ddots & \vdots \\
+  	a_{n1} & \ldots & a_{nn} \\
+  \end{array}
+\right)
+$$
+
+
+%\newpage
+%============================================================================================================================
+\subsection{Нумерованные формулы} \label{subsect1_3_3}
+
+А вот так пишется нумерованая формула:
+\begin{equation}
+  \label{eq:equation1}
+  e = \lim_{n \to \infty} \left( 1+\frac{1}{n} \right) ^n
+\end{equation}
+
+Нумерованых формул может быть несколько:
+\begin{equation}
+  \label{eq:equation2}
+  \lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} = \frac{\pi^2}{6}
+\end{equation}
+
+В последствии на формулы (\ref{eq:equation1}) и (\ref{eq:equation2}) можно ссылаться.
+
+%\newpage
+%============================================================================================================================
+
+\clearpage
+
+\chapter{Длинное название главы, в которой мы смотрим на примеры того, как будут верстаться изображения и списки} \label{chapt2}
+
+\section{Одиночное изображение} \label{sect2_1}
+
+\begin{figure} [h] 
+  \center
+  \includegraphics [scale=0.27] {LaTeX}
+  \caption{TeX.} 
+  \label{img:latex}  
+\end{figure}
+
+%\newpage
+%============================================================================================================================
+\section{Длинное название параграфа, в котором мы узнаём как сделать две картинки с общим номером и названием} \label{sect2_2}
+
+А это две картинки под общим номером и названием:
+\begin{figure}[h]
+  \begin{minipage}[h]{0.49\linewidth}
+    \center{\includegraphics[width=0.5\linewidth]{knuth1} \\ а)}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[h]{0.49\linewidth}
+    \center{\includegraphics[width=0.5\linewidth]{knuth2} \\ б)}
+  \end{minipage}
+  \caption{Очень длинная подпись к изображению, на котором представлены две фотографии Дональда Кнута}
+  \label{img:knuth}  
+\end{figure}
+
+%\newpage
+%============================================================================================================================
+\section{Пример вёрстки списоков} \label{sect2_3}
+
+\noindent Нумерованный список:
+\begin{enumerate}
+  \item Первый пункт.
+  \item Второй пункт.
+  \item Третий пункт.
+\end{enumerate}
+
+\noindent Маркированный список:
+\begin{itemize}
+  \item Первый пункт.
+  \item Второй пункт.
+  \item Третий пункт.
+\end{itemize}
+
+\noindent Вложенные списки:
+\begin{itemize}
+  \item Имеется маркированный список.
+  \begin{enumerate}
+    \item В нём лежит нумерованный список,
+    \item в котором
+    \begin{itemize}
+      \item лежит ещё один маркированный список.
+    \end{itemize}    
+  \end{enumerate}
+\end{itemize}
+
+
+\clearpage
